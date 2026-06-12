@@ -3,21 +3,25 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Link as Scroll } from "react-scroll";
 
+// Sticky header navigation bar component
 export const Navbar = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
+      // Fixed top placement with border styling
       className="bg-white h-[70px] flex sticky top-0 border-b-2 border-b-[#be4dec] z-50"
     >
       <div className="flex justify-between items-center w-[360px] md:w-[700px] lg:w-[950px] xl:w-[1250px] 2xl:w-[1440px] m-auto">
+        {/* Company logo linking back to home */}
         <Link to="/">
           <img src="img/logo.svg" alt="logo" className="w-[150px]" />
         </Link>
         <div className="flex items-center gap-2">
+          {/* External portal login link visible on larger screens */}
           <a
-            href="http://access.kolorowey.com"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden lg:block"

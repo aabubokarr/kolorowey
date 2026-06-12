@@ -2,12 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 
+// Hero section of the homepage with intro copywriting and branding visual
 export const Hero = () => {
   return (
     <div
       className="flex flex-col lg:flex-row gap-10 justify-between items-center w-[360px] md:w-[700px] lg:w-[900px] xl:w-[1100px] 2xl:w-[1200px] m-auto"
-      style={{ height: "calc(100vh - 70px)" }}
+      style={{ height: "calc(100vh - 70px)" }} // Fills screen height excluding Navbar
     >
+      {/* Slide-in left container for copywriting text and CTA button */}
       <motion.div
         className="w-full lg:w-[80%] xl:w-[60%]"
         initial={{ x: -30, opacity: 0 }}
@@ -23,12 +25,15 @@ export const Hero = () => {
           Revenue Machine,
           <br /> Seamlessly!
         </h1>
+        {/* Smooth scroll link targeting the contact section */}
         <Link to="contact" offset={-65}>
           <button className="mt-10 md:w-[180px] w-[150px] md:h-[44px] h-10 text-white bg-color hover:scale-[1.15] transition-all rounded-[2px]">
             REQUEST DEMO
           </button>
         </Link>
       </motion.div>
+
+      {/* Slide-in right container for visual product artwork (has float animation) */}
       <motion.div
         className="anime-div"
         initial={{ x: 30, opacity: 0 }}
@@ -44,3 +49,4 @@ export const Hero = () => {
     </div>
   );
 };
+

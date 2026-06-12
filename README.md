@@ -1,6 +1,8 @@
-# Kolorowey - Agency Application
+# Kolorowey - AdTech Application
 
-Welcome to the kolorowey project! This README provides an overview of the project, setup instructions, and other relevant details.
+![Kolorowey](kolorowey.png)
+
+Welcome to the **Kolorowey** project! This README provides an overview of the project, setup instructions, and other relevant details.
 
 ## Table of Contents
 
@@ -8,14 +10,14 @@ Welcome to the kolorowey project! This README provides an overview of the projec
 - [About](#about)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Contributors](#contributors)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## Visit
 
-- [Vercel](https://kolorowey0.vercel.app/)
+- [Repository](https://github.com/aabubokarr/kolorowey)
+- [Website](https://kolorowey.netlify.app/)
 
 ## About
 
@@ -23,17 +25,16 @@ Welcome to the kolorowey project! This README provides an overview of the projec
 
 ## Features
 
-- Navbar
 - Hero
-- Disease
+- Services
 - Testimonials
-- Footer
+- Contact
 
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/woabu0/kolorowey.git
+   git clone https://github.com/aabubokarr/kolorowey.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -43,14 +44,11 @@ Welcome to the kolorowey project! This README provides an overview of the projec
    ```bash
    npm add vite@latest
    ```
-
-## Usage
-
-1. Start the application:
+4. Start the application:
    ```bash
    npm run dev
    ```
-2. Open your browser and navigate to:
+5. Open your browser and navigate to:
    ```
    http://localhost:5173
    ```
@@ -58,8 +56,8 @@ Welcome to the kolorowey project! This README provides an overview of the projec
 ## Contributors
 
 <p align="center">
-  <a href="https://github.com/woabu0/kolorowey/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=woabu0/kolorowey" alt="Contributors" />
+  <a href="https://github.com/aabubokarr/kolorowey/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=aabubokarr/kolorowey" alt="Contributors" />
   </a>
 </p>
 

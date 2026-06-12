@@ -64,25 +64,28 @@ const testimonials = [
   },
 ];
 
+// Swiper slider presenting customer success testimonials
 export const Testimonial = () => {
   return (
     <div className="w-[360px] md:w-[700px] lg:w-[950px] xl:w-[1200px] 2xl:w-[1480px] m-auto">
       <h1 className="text-center text-[30px] my-16">Testimonials</h1>
       <div>
+        {/* Dynamic touch-friendly swiper slider */}
         <Swiper
           className="-z-1"
           modules={[Navigation, Autoplay]}
           spaceBetween={10}
           slidesPerView={2}
           navigation={{
-            nextEl: ".next",
-            prevEl: ".prev",
+            nextEl: ".next", // CSS selector for custom next navigation trigger
+            prevEl: ".prev", // CSS selector for custom prev navigation trigger
           }}
           autoplay={{
             delay: 3000,
             disableOnInteraction: true,
           }}
           breakpoints={{
+            // Responsive break points adjusting slide count dynamically
             0: {
               slidesPerView: 1,
             },
@@ -103,9 +106,9 @@ export const Testimonial = () => {
           onSlideChange={() => console.log("slide change")}
         >
           {testimonials.map((t) => (
-            <SwiperSlide>
+            <SwiperSlide key={t.id}>
               <div className="flex items-center flex-col gap-3 text-center w-[360px] md:w-[345px] lg:w-[288px] h-[350px] rounded-[20px] border-[.5px] border-[#c4c4c4] p-10 md:p-5 hover:border-[#be4dec] cursor-pointer">
-                <img src={t.img} className="w-[80px] h-[80px] rounded-[50px]" />
+                <img src={t.img} className="w-[80px] h-[80px] rounded-[50px]" alt={t.name} />
                 <h1 className="text-[22px]">{t.name}</h1>
                 <p className="text-[14px]">{t.testimonial}</p>
               </div>
@@ -113,6 +116,7 @@ export const Testimonial = () => {
           ))}
         </Swiper>
       </div>
+      {/* Slider manual control triggers */}
       <div className="flex items-center justify-center gap-4 mt-10">
         <img
           src="img/arrow.png"
@@ -128,3 +132,4 @@ export const Testimonial = () => {
     </div>
   );
 };
+

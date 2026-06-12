@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar } from "../sections/Navbar";
 
+// Fallback 404 error page displayed when route mismatch occurs
 export const Error = () => {
   return (
     <div>
@@ -9,3 +10,4 @@ export const Error = () => {
     </div>
   );
 };
+

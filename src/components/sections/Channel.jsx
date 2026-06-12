@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+// List of supported advertising channels and their image paths
 const channels = [
   {
     id: 1,
@@ -34,6 +35,7 @@ const channels = [
   },
 ];
 
+// Grid section presenting all channels with scroll-triggered staggered transitions
 export const Channel = () => {
   return (
     <div id="channel" className="mt-24 m-auto w-3/4">
@@ -41,8 +43,10 @@ export const Channel = () => {
       <div className="grid grid-cols-3">
         {channels.map((c, i) => (
           <motion.div
+            key={c.id} // Added key for React reconciliation
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
+            // Stagger animation transition using index-based delay multiplication
             transition={{ duration: 0.5, delay: i * 0.2 }}
             className="mt-10"
           >
@@ -58,3 +62,4 @@ export const Channel = () => {
     </div>
   );
 };
+

@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 
+// Interactive contact form supporting conditional fields for publishers
 export const Contact = () => {
+  // Track selected user role (Publisher, Advertiser, D2C, etc.)
   const [selectedJob, setSelectedJob] = useState("");
 
   const handleJobChange = (event) => {
     setSelectedJob(event.target.value);
   };
 
+  // State to track selected metrics for publisher volume quantities
   const [volumeQuantity, setVolumeQuantity] = useState({
     Pageviews: false,
     Visits: false,
@@ -20,6 +23,7 @@ export const Contact = () => {
       [volumeID]: !prevQuantities[volumeID],
     }));
   };
+
 
   return (
     <div

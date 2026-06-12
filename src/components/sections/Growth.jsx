@@ -39,28 +39,35 @@ const growths = [
   },
 ];
 
+// Component illustrating publisher/advertiser growth solutions
+// Uses scroll-linked intersection observer to swap structural imagery stickily
 export const Growth = () => {
+  // tracks which text description block is currently scrolled into focus
   const [activeIndex, setActiveIndex] = useState(0);
   const refs = useRef([]);
 
   useEffect(() => {
+    // Instantiate intersection observers for each descriptive block
     const observers = refs.current.map((ref, index) => {
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
+            // Update active visual image index when card comes fully into view
             setActiveIndex(index);
           }
         },
-        { threshold: 1 }
+        { threshold: 1 } // Requires full card visibility to trigger focus switch
       );
       if (ref) observer.observe(ref);
       return observer;
     });
 
     return () => {
+      // Clean up observers on unmount
       observers.forEach((observer) => observer.disconnect());
     };
   }, []);
+
 
   return (
     <div className="w-[360px] md:w-[700px] lg:w-[950px] xl:w-[1100px] 2xl:w-[1200px] mt-24 m-auto">

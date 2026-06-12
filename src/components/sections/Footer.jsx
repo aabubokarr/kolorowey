@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+// Footer component showing about info, social media handles, contact info, and copyright
 export const Footer = () => {
   return (
     <div className="bg-color text-white mt-16">
@@ -22,7 +23,7 @@ export const Footer = () => {
             </div>
             <div className="flex items-center gap-3">
               <a
-                href="https://www.facebook.com/profile.php?id=61554003327556"
+                href="#"
                 target="_blank"
                 className="w-[60px] h-[60px] bg-white rounded-[50px] flex items-center justify-center cursor-pointer"
               >
@@ -35,7 +36,7 @@ export const Footer = () => {
                 </div>
               </a>
               <a
-                href="https://www.instagram.com/koloroweymedia/"
+                href="#"
                 target="_blank"
                 className="w-[60px] h-[60px] bg-white rounded-[50px] flex items-center justify-center cursor-pointer"
               >
@@ -48,7 +49,7 @@ export const Footer = () => {
                 </div>
               </a>
               <a
-                href="https://www.linkedin.com/company/koloroweymedia/"
+                href="#"
                 target="_blank"
                 className="w-[60px] h-[60px] bg-white rounded-[50px] flex items-center justify-center cursor-pointer"
               >

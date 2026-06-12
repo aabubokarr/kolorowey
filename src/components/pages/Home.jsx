@@ -8,6 +8,7 @@ import { Testimonial } from '../sections/Testimonial'
 import { Contact } from '../sections/Contact'
 import { Footer } from '../sections/Footer'
 
+// Landing page dashboard assembling all core section components of the app
 export const Home = () => {
   return (
     <div>
@@ -22,3 +23,4 @@ export const Home = () => {
     </div>
   )
 }
+

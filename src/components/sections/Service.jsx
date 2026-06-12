@@ -64,22 +64,24 @@ const services = [
   },
 ];
 
+// Carousel component showing various advertising operations & marketing services
 export const Service = () => {
   return (
     <div id="services">
       <h1 className="text-[30px] text-center my-20">Our Services</h1>
       <div>
+        {/* Infinite scrolling marquee slider */}
         <Marquee
           pauseOnHover="true"
           gradient="true"
-          gradientColor="#F7F7F7"
+          gradientColor="#F7F7F7" // Matching index body background color
           gradientWidth={150}
         >
           <div className="flex">
             {services.map((s) => (
-              <div className="w-[200px] md:w-[250px] cursor-pointer px-5">
+              <div key={s.id} className="w-[200px] md:w-[250px] cursor-pointer px-5">
                 <div className="flex flex-col items-center gap-5">
-                  <img src={s.img} className="w-10 h-10" />
+                  <img src={s.img} className="w-10 h-10" alt={s.title} />
                   <h1 className="text-[10px] md:text-[16px] text-center">
                     {s.title}
                   </h1>
@@ -92,3 +94,4 @@ export const Service = () => {
     </div>
   );
 };
+
